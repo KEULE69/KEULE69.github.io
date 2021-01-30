@@ -6,7 +6,7 @@ var oUl = document.getElementById("vip");
 
 
 
-var names = ["肖战", "迪丽热巴", "罗云熙", "陈钰琪", "白宇", "叶青", "胡潇灵", "汤唯", "王一博", "李恩童", "林更新", "刘亦菲", "于朦胧", "陈乔恩", "高伟光", "陈宇欣", "朱一龙", "杨丞琳", "邢昭林", "王一菲", "杨洋", "萱萱", "刘昊然", "杨紫", "吴磊", "杨幂", "张国荣", "石原里美", "胡歌", "陈瑶", "吴亦凡", "刘诗诗", "霍建华", "赵丽颖", "张若昀", "唐嫣", "周杰伦", "angelababy", "姜潮", "李沁", "陈冠希", "谭松韵", "李现", "金晨", "乔振宇", "郭碧婷", "黄晓明", "张子枫", "陈赫", "杨子姗", "白敬亭", "韩雪", "彭于晏", "张钧甯", "朱亚文", "王丽坤", "王凯", "叶璇"];
+var names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
 
 
@@ -15,13 +15,13 @@ var t = 0;
 
 //格式
 function place() {
-    for (var i = 0; i < 58; i++) {
-        t = i * (360 / 58) + "deg";
+    for (var i = 0; i < 10; i++) {
+        t = i * (360 / 10) + "deg";
         oliList[i].innerHTML = names[i];
         oliList[i].style.transform = "rotate(" + t + ") translate(360px)";
 
         var oSpan = document.createElement("span");
-        oSpan.innerHTML = "VIP!";
+        oSpan.innerHTML = " ";
         oSpan.style.color = "#ac112c"
         oSpan.style.cursor = "pointer";
         oSpan.style.textAlign = "lift";
@@ -33,14 +33,14 @@ function place() {
 place();
 //随机度数
 function fun() {
-    var num = Math.round((Math.random() * 58));
-    return num * (360 / 58) + 180;
+    var num = Math.round((Math.random() * 10));
+    return num * (360 / 10) + 180;
 }
 //旋转事件
 var myDeg = 0;
 obtnYes.onmousedown = function() {
     myDeg = myDeg + fun();
-    oman.style.transitionDuration = "3s";
+    oman.style.transitionDuration = "5s";
     obtnYes.style.boxShadow = "none";
     console.log(myDeg);
     oman.style.transform = "rotateZ(" + myDeg + "deg)";

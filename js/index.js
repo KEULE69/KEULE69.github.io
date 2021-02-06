@@ -6,7 +6,7 @@ var oUl = document.getElementById("vip");
 
 
 
-var names = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+var names = ["A", "B", "C", "D"];
 
 
 
@@ -33,8 +33,8 @@ function place() {
 place();
 //随机度数
 function fun() {
-    var num = Math.round((Math.random() * 10));
-    return num * (360 / 10) + 180;
+    var num = Math.round((Math.random() * 4));
+    return num * (360 / 4) + 180;
 }
 //旋转事件
 var myDeg = 0;
